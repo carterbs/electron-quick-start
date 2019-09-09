@@ -22,9 +22,10 @@ function createWindow() {
     slashes: true
   }))
   mainWindow.setMovable(false);
-  mainWindow.on("will-move", (e, nb) => {
-    console.log('moving', Date.now(), nb);
-  });
+  // Uncomment if you want to see the proposed movements.
+  // mainWindow.on("will-move", (e, nb) => {
+  //   console.log('moving', Date.now(), nb);
+  // });
   // Open the DevTools.
   mainWindow.on("will-resize", console.log);
   // Emitted when the window is closed.
